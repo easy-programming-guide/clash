@@ -1,5 +1,9 @@
 # Build Clash as an Image, then run it anywhere.
 
+[![Docker Pulls](https://img.shields.io/docker/pulls/wujun4code/clash)](https://hub.docker.com/r/wujun4code/clash)
+[![GitHub Issues](https://img.shields.io/github/issues/easy-programming-guide/clash)](https://github.com/easy-programming-guide/clash/issues)
+[![License](https://img.shields.io/github/license/easy-programming-guide/clash)](LICENSE)
+
 ## Quick start
 
 edit the `config.sample.yaml` with your proxies, and rename it to `config.yaml`
@@ -36,3 +40,4 @@ docker build \
 
 ## Build with Github Action
 
+please check `./.github/workflows`
