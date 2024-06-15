@@ -1,0 +1,15 @@
+services:
+  myapp:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      # args:
+      #   HTTP_PROXY: http://192.168.137.1:7890
+      #   HTTPS_PROXY: http://192.168.137.1:7890
+      #   NO_PROXY: localhost,127.0.0.1
+    volumes:
+      - ./config.yaml:/opt/clash/config.yaml
+    ports:
+      # - "53:53"
+      - "7890:7890"
+      - "7891:7891"
