@@ -247,9 +247,14 @@ rule-providers:
     path: ./ruleset/lancidr.yaml
 
   applications:
-    type: http
+    type: file
     behavior: classical
     path: ./ruleset/applications.yaml
+
+  chatGPT:
+    type: file
+    behavior: domain
+    path: ./ruleset/chatGPT.yaml
     
 rules:
   - RULE-SET,applications,DIRECT
@@ -257,12 +262,13 @@ rules:
   - RULE-SET,reject,REJECT
   - RULE-SET,icloud,DIRECT
   - RULE-SET,apple,DIRECT
-  - RULE-SET,google,Auto
-  - RULE-SET,gfw,Auto
-  - RULE-SET,proxy,Auto
   - RULE-SET,direct,DIRECT
   - RULE-SET,lancidr,DIRECT
   - RULE-SET,cncidr,DIRECT
+  - RULE-SET,chatGPT,Auto
+  - RULE-SET,google,Auto
+  - RULE-SET,gfw,Auto
+  - RULE-SET,proxy,Auto
   - RULE-SET,tld-not-cn,Auto
   - RULE-SET,telegramcidr,Auto
   - GEOIP,LAN,DIRECT

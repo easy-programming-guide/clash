@@ -7,6 +7,7 @@
 ## Quick start
 
 edit the `config.sample.yaml` with your proxies, and rename it to `config.yaml`
+
 the run 
 
 ```bash

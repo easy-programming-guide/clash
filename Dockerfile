@@ -16,6 +16,8 @@ RUN gunzip /opt/clash/clash-linux-amd64-n2023-09-05-gdcc8d87.gz && \
 COPY Country.mmdb /opt/clash/
 
 RUN mkdir -p /opt/clash/ruleset
+COPY ruleset /opt/clash/ruleset
+
 RUN curl -L -o /opt/clash/ruleset/reject.yaml https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt
 RUN curl -L -o /opt/clash/ruleset/icloud.yaml https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/icloud.txt
 RUN curl -L -o /opt/clash/ruleset/apple.yaml https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/apple.txt
@@ -30,7 +32,6 @@ RUN curl -L -o /opt/clash/ruleset/cncidr.yaml https://cdn.jsdelivr.net/gh/Loyals
 RUN curl -L -o /opt/clash/ruleset/lancidr.yaml https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/lancidr.txt
 RUN curl -L -o /opt/clash/ruleset/applications.yaml https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/applications.txt
 
-RUN ls
 EXPOSE 53 7890 7891
 
 CMD ["/opt/clash/clash", "-d", "/opt/clash/"]
