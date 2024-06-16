@@ -1,6 +1,6 @@
 services:
   clash:
-    image: wujun4code/clash:latest
+    image: ghcr.io/easy-programming-guide/clash:latest
     volumes:
       - ./config.yaml:/opt/clash/config.yaml
     ports:

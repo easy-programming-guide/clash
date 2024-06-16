@@ -4,4 +4,3 @@ weight: 1
 chapter: true
 pre: "<b></b>"
 ---
-GHCR_TOKEN
