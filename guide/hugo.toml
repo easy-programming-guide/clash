@@ -1,0 +1,16 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = 'Clash - Network proxy'
+theme = 'hugo-theme-relearn'
+defaultContentLanguage = 'en'
+
+[languages]
+  [languages.en]
+    languageName = 'English'
+    title = 'Clash - Network proxy'
+    weight = 1
+
+  [languages.zh-CN]
+    languageName = '中文 - 简体'
+    title = "Clash - 网络代理"
+    weight = 2

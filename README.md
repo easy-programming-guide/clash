@@ -42,3 +42,11 @@ docker build \
 ## Build with Github Action
 
 please check `./.github/workflows`
+
+## Run docs locally
+
+```bash
+git submodule update --init --recursive
+cd ./guide
+hugo serve --bind 0.0.0.0 --baseURL http://0.0.0.0:1313  --port 1313
+```
