@@ -12,3 +12,5 @@ download the `config.sample.yaml`
 ```sh
 wget https://raw.githubusercontent.com/easy-programming-guide/clash/main/config.sample.yaml
 ```
+
+then 
