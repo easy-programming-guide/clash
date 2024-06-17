@@ -255,6 +255,11 @@ rule-providers:
     type: file
     behavior: domain
     path: ./ruleset/chatGPT.yaml
+
+  engineer:
+    type: file
+    behavior: domain
+    path: ./ruleset/engineer.yaml
     
 rules:
   - RULE-SET,applications,DIRECT
@@ -266,6 +271,7 @@ rules:
   - RULE-SET,lancidr,DIRECT
   - RULE-SET,cncidr,DIRECT
   - RULE-SET,chatGPT,Auto
+  - RULE-SET,engineer,Auto  
   - RULE-SET,google,Auto
   - RULE-SET,gfw,Auto
   - RULE-SET,proxy,Auto
@@ -274,4 +280,3 @@ rules:
   - GEOIP,LAN,DIRECT
   - GEOIP,CN,DIRECT
   - MATCH,Auto
-

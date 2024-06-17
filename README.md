@@ -17,15 +17,24 @@ the run
 ```bash
 docker compose up -d --build 
 ```
-in case of connection with  `https://cdn.jsdelivr.net` you can comment in the `args` and replace with your proxy
+in case of connection issue with  `https://cdn.jsdelivr.net` you can comment in the `args` and replace with your proxy
 
 ```yaml
       # args:
-      #   HTTP_PROXY: http://192.168.137.1:7890
-      #   HTTPS_PROXY: http://192.168.137.1:7890
+      #   HTTP_PROXY: http://192.168.137.200:7890
+      #   HTTPS_PROXY: http://192.168.137.200:7890
       #   NO_PROXY: localhost,127.0.0.1
 ```
 
+## Quick Run
+
+```sh
+docker build -t clash
+docker run -d \
+  --name clash \
+  -v ./config.yaml:/opt/clash/config.yaml \
+  clash
+```
 
 ## Customize build
 
@@ -33,12 +42,12 @@ in case of connection with  `https://cdn.jsdelivr.net` you can comment in the `a
 docker build -t clash .
 ```
 
-or if you are using a proxy to build your can pass the args with this way
+or if you are using a proxy to build your can pass the args with this way, `192.168.137.200` is the ip of your docker host, please do not use `127.0.0.1`.
 
 ```bash
 docker build \
-    --build-arg HTTP_PROXY=http://192.168.137.1:7890 \
-    --build-arg HTTPS_PROXY=http://192.168.137.1:7890 \
+    --build-arg HTTP_PROXY=http://192.168.137.200:7890 \
+    --build-arg HTTPS_PROXY=http://192.168.137.200:7890 \
     --build-arg NO_PROXY=localhost,127.0.0.1 \
     -t clash .
 ```

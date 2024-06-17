@@ -1,0 +1,6 @@
+payload:
+  - '+.docker.io'
+  - '+.docker.com'
+  - '+.ghcr.io'
+  - '+.jsdelivr.net'
+  - '+.githubusercontent.com'
