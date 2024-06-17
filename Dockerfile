@@ -4,7 +4,7 @@ FROM ubuntu:latest
 WORKDIR /opt/clash
 
 RUN apt update && \
-    apt install -y gzip curl net-tools dnsutils && \
+    apt install -y gzip curl net-tools dnsutils telnet nmap && \
     apt clean && \
     rm -rf /var/lib/apt/lists/*
 
