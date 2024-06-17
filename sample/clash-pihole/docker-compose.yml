@@ -1,0 +1,41 @@
+services:
+  clash:
+    container_name: clash
+    image: ghcr.io/easy-programming-guide/clash:latest
+    volumes:
+      - ./config.yaml:/opt/clash/config.yaml
+    ports:
+      - "7890:7890"
+      - "7891:7891"
+    depends_on:
+      - pihole
+    networks:
+      - pihole-network
+    dns:
+      - 172.20.0.2
+  pihole:
+    container_name: pihole
+    image: pihole/pihole:latest
+    # For DHCP it is recommended to remove these ports and instead add: network_mode: "host"
+    ports:
+      - "53:53/tcp"
+      - "53:53/udp"
+      - "80:80/tcp"
+    environment:
+      TZ: 'America/Chicago'
+      WEBPASSWORD: 'my!admin3password'
+    # Volumes store your data between container upgrades
+    volumes:
+      - './etc-pihole:/etc/pihole'
+      - './etc-dnsmasq.d:/etc/dnsmasq.d'
+    #   https://github.com/pi-hole/docker-pi-hole#note-on-capabilities
+    networks:
+      pihole-network:
+        ipv4_address: 172.20.0.2
+    restart: unless-stopped
+networks:
+  pihole-network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.20.0.0/16

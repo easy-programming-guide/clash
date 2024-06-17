@@ -14,3 +14,10 @@ defaultContentLanguage = 'en'
     languageName = '中文 - 简体'
     title = "Clash - 网络代理"
     weight = 2
+[params]
+# Shows checkmarks for visited pages of the main menu.
+# Default: false
+# This also causes the display of the `Clear History` entry in the lower part
+# of the menu to remove all checkmarks. The checkmarks will also been removed
+# if you regenerate your site as the ids are not stable.
+showVisitedLinks = true

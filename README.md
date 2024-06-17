@@ -6,6 +6,10 @@
 
 ## Quick start
 
+Use case docs can be found -> [Install CLASH](https://easy-programming-guide.github.io/clash/)
+
+## Build image
+
 edit the `config.sample.yaml` with your proxies, and rename it to `config.yaml`
 
 the run 
