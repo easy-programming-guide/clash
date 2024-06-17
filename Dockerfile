@@ -3,9 +3,9 @@ FROM ubuntu:latest
 
 WORKDIR /opt/clash
 
-RUN apt-get update && \
-    apt-get install -y gzip curl && \
-    apt-get clean && \
+RUN apt update && \
+    apt install -y gzip curl net-tools dnsutils && \
+    apt clean && \
     rm -rf /var/lib/apt/lists/*
 
 COPY clash-linux-amd64-n2023-09-05-gdcc8d87.gz /opt/clash/

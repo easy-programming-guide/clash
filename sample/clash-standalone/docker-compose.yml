@@ -1,9 +1,12 @@
 services:
   clash:
     image: ghcr.io/easy-programming-guide/clash:latest
+    container_name: clash-standalone
     volumes:
       - ./config.yaml:/opt/clash/config.yaml
     ports:
       # - "53:53"
       - "7890:7890"
       - "7891:7891"
+    # dns:
+    #   - 192.168.5.202

@@ -30,7 +30,24 @@ Pi-Hole is a good open source Dns Server that you can self hosted anywhere. Plea
     > Please follow the steps from [Update config]({{% ref "basic/#update-config" %}}).
     {{% /notice %}}
 
-3. Run them both
+   and you should disable dns service from Clash, edit `config.yaml`, the 
+
+   ```yaml
+    dns:
+    enable: false # set it to false, should disable it when you are using pi-hole now.
+    listen: 0.0.0.0:53
+    ipv6: true
+   ```
+
+
+3. Stop local dns service 
+
+    ```sh
+    sudo systemctl stop systemd-resolved
+    sudo systemctl disable systemd-resolved
+    ```
+
+4. Burn them up
 
     ```sh
     docker compose up -d
