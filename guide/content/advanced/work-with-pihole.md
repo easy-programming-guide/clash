@@ -27,16 +27,14 @@ Pi-Hole is a good open source Dns Server that you can self hosted anywhere. Plea
 2. Rename `config.sample.yaml` to `config.yaml`, MUST follow steps from [Update config]({{% ref "basic/#update-config" %}}).
     
     {{% notice style="note" %}}
-    > Please follow the steps from [Update config]({{% ref "basic/#update-config" %}}).
+Please follow the steps from [Update config]({{% ref "basic/#update-config" %}}).
     {{% /notice %}}
 
    and you should disable dns service from Clash, edit `config.yaml`, the 
 
    ```yaml
     dns:
-    enable: false # set it to false, should disable it when you are using pi-hole now.
-    listen: 0.0.0.0:53
-    ipv6: true
+      enable: false # set it to false, should disable it when you are using pi-hole now.
    ```
 
 

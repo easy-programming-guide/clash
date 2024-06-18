@@ -4,3 +4,5 @@ payload:
   - '+.ghcr.io'
   - '+.jsdelivr.net'
   - '+.githubusercontent.com'
+  - '+.gliderlabs.com'
+  - '+.k8s.io'

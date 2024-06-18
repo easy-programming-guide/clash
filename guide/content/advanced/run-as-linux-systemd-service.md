@@ -137,7 +137,7 @@ sudo systemctl enable clash.service
     systemctl status clash.service
     systemctl stop clash.service
     systemctl daemon-reload
-    sudo re -rf /etc/systemd/system/clash.service
+    sudo rm -rf /etc/systemd/system/clash.service
     ```
 
 2. remove clash
