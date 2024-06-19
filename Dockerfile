@@ -1,4 +1,3 @@
-# 使用基础镜像
 FROM ubuntu:latest
 
 WORKDIR /opt/clash
@@ -14,21 +13,8 @@ RUN gunzip /opt/clash/clash-linux-amd64-n2023-09-05-gdcc8d87.gz && \
 COPY Country.mmdb /opt/clash/
 
 RUN mkdir -p /opt/clash/ruleset
-COPY ruleset /opt/clash/ruleset
 
-RUN curl -L -o /opt/clash/ruleset/reject.yaml https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt
-RUN curl -L -o /opt/clash/ruleset/icloud.yaml https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/icloud.txt
-RUN curl -L -o /opt/clash/ruleset/apple.yaml https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/apple.txt
-RUN curl -L -o /opt/clash/ruleset/google.yaml https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/google.txt
-RUN curl -L -o /opt/clash/ruleset/proxy.yaml https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/proxy.txt
-RUN curl -L -o /opt/clash/ruleset/direct.yaml https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/direct.txt
-RUN curl -L -o /opt/clash/ruleset/private.yaml https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/private.txt
-RUN curl -L -o /opt/clash/ruleset/gfw.yaml https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/gfw.txt
-RUN curl -L -o /opt/clash/ruleset/tld-not-cn.yaml https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/tld-not-cn.txt
-RUN curl -L -o /opt/clash/ruleset/telegramcidr.yaml https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/telegramcidr.txt
-RUN curl -L -o /opt/clash/ruleset/cncidr.yaml https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/cncidr.txt
-RUN curl -L -o /opt/clash/ruleset/lancidr.yaml https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/lancidr.txt
-RUN curl -L -o /opt/clash/ruleset/applications.yaml https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/applications.txt
+VOLUME /opt/clash/config.yaml
 
 EXPOSE 53 7890 7891 9090
 

@@ -1,0 +1,31 @@
+FROM ubuntu:latest
+
+WORKDIR /opt/clash
+
+# ENV http_proxy=http://192.168.137.200:7890 \
+#     https_proxy=http://192.168.137.200:7890 \
+#     no_proxy=localhost,127.0.0.1
+
+RUN apt update && \
+    apt install -y gzip curl net-tools dnsutils traceroute telnet nmap wget
+
+# RUN apt install -y inetutils-telnet && \
+#     (echo quit | telnet 192.168.137.200 7890) && \
+#     echo "Telnet to proxy succeeded" || (echo "Telnet to proxy failed"; exit 1)
+
+COPY clash-linux-amd64-n2023-09-05-gdcc8d87.gz /opt/clash/
+RUN gunzip /opt/clash/clash-linux-amd64-n2023-09-05-gdcc8d87.gz && \
+    mv /opt/clash/clash-linux-amd64-n2023-09-05-gdcc8d87 /opt/clash/clash && \
+    chmod +x /opt/clash/clash
+
+
+COPY Country.mmdb /opt/clash/
+
+RUN curl -L -o /opt/clash/config.yaml <here-is-your-subscription-url>
+
+# RUN "/opt/clash/clash"  "-d" "/opt/clash/"
+
+EXPOSE 53 7890 7891 9090
+
+CMD ["/opt/clash/clash", "-d", "/opt/clash/"]
+
