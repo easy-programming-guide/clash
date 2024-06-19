@@ -2,7 +2,6 @@ payload:
   - '+.docker.io'
   - '+.docker.com'
   - '+.ghcr.io'
-  - '+.jsdelivr.net'
   - '+.githubusercontent.com'
   - '+.gliderlabs.com'
   - '+.k8s.io'

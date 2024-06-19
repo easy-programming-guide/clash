@@ -2,3 +2,5 @@ config.yaml
 */**/public
 */**/etc-pihole
 */**/etc-dnsmasq.d
+
+Dockerfile.subscription

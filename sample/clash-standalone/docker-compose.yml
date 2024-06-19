@@ -2,6 +2,7 @@ services:
   clash:
     image: ghcr.io/easy-programming-guide/clash:latest
     container_name: clash-standalone
+    # network_mode: "host"
     volumes:
       - ./config.yaml:/opt/clash/config.yaml
     ports:

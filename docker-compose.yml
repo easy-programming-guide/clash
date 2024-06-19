@@ -1,22 +1,24 @@
 services:
   clash:
+    container_name: clash-dev
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.subscription
       args:
-        HTTP_PROXY: http://192.168.5.189:7890
-        HTTPS_PROXY: http://192.168.5.189:7890
+        HTTP_PROXY: http://192.168.137.200:7890
+        HTTPS_PROXY: http://192.168.137.200:7890
         NO_PROXY: localhost,127.0.0.1
     volumes:
       - ./config.yaml:/opt/clash/config.yaml
-    ports:
-      # - "53:53"
-      - "7890:7890"
-      - "7891:7891"
-      - "9090:9090"
-  dashboard:
-    container_name: clash-dashboard
-    image: ghcr.io/haishanh/yacd:master
-    # For DHCP it is recommended to remove these ports and instead add: network_mode: "host"
-    ports:
-      - "1234:80"
+    network_mode: "host"
+    # ports:
+    #   # - "53:53"
+    #   - "8890:7890"
+    #   - "8891:7891"
+    #   - "8090:9090"
+  # dashboard:
+  #   container_name: clash-dashboard
+  #   image: ghcr.io/haishanh/yacd:master
+  #   # For DHCP it is recommended to remove these ports and instead add: network_mode: "host"
+  #   ports:
+  #     - "1234:80"

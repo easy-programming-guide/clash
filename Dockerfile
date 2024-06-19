@@ -4,9 +4,7 @@ FROM ubuntu:latest
 WORKDIR /opt/clash
 
 RUN apt update && \
-    apt install -y gzip curl net-tools dnsutils telnet nmap && \
-    apt clean && \
-    rm -rf /var/lib/apt/lists/*
+    apt install -y gzip curl net-tools dnsutils traceroute telnet nmap wget
 
 COPY clash-linux-amd64-n2023-09-05-gdcc8d87.gz /opt/clash/
 RUN gunzip /opt/clash/clash-linux-amd64-n2023-09-05-gdcc8d87.gz && \
