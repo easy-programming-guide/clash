@@ -32,6 +32,6 @@ RUN curl -L -o /opt/clash/ruleset/cncidr.yaml https://cdn.jsdelivr.net/gh/Loyals
 RUN curl -L -o /opt/clash/ruleset/lancidr.yaml https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/lancidr.txt
 RUN curl -L -o /opt/clash/ruleset/applications.yaml https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/applications.txt
 
-EXPOSE 53 7890 7891
+EXPOSE 53 7890 7891 9090
 
 CMD ["/opt/clash/clash", "-d", "/opt/clash/"]
