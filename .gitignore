@@ -3,4 +3,9 @@ config.yaml
 */**/etc-pihole
 */**/etc-dnsmasq.d
 
+*/clash-linux/cache.db
+*/clash-linux/clash
+*/clash-linux/ruleset
+*/clash-linux/Country.mmdb
+
 Dockerfile.subscription
