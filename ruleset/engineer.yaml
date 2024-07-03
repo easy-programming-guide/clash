@@ -5,3 +5,4 @@ payload:
   - '+.githubusercontent.com'
   - '+.gliderlabs.com'
   - '+.k8s.io'
+  - 'time.cloudflare.com'
