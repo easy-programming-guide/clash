@@ -6,3 +6,4 @@ payload:
   - '+.gliderlabs.com'
   - '+.k8s.io'
   - 'time.cloudflare.com'
+  - '+.vsean.net'
