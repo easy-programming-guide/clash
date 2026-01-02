@@ -7,3 +7,4 @@ payload:
   - '+.k8s.io'
   - 'time.cloudflare.com'
   - '+.vsean.net'
+  - '+.r2.dev'
