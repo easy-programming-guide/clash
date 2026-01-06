@@ -8,6 +8,6 @@ payload:
   - 'time.cloudflare.com'
   - DOMAIN-SUFFIX,vsean.net
   - DOMAIN-SUFFIX,r2.dev
-  - DOMAIN-SUFFIX,railway.app
+  - DOMAIN-SUFFIX,railway.com
   - DOMAIN-SUFFIX,vercel.com
   - DOMAIN-SUFFIX,netlify.app
