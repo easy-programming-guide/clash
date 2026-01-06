@@ -9,5 +9,6 @@ payload:
   - DOMAIN-SUFFIX,vsean.net
   - DOMAIN-SUFFIX,r2.dev
   - DOMAIN-SUFFIX,railway.com
+  - DOMAIN-SUFFIX,railway.app
   - DOMAIN-SUFFIX,vercel.com
   - DOMAIN-SUFFIX,netlify.app
