@@ -12,3 +12,4 @@ payload:
   - DOMAIN-SUFFIX,railway.app
   - DOMAIN-SUFFIX,vercel.com
   - DOMAIN-SUFFIX,netlify.app
+  - DOMAIN-SUFFIX,openrouter.ai
