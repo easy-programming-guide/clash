@@ -13,3 +13,4 @@ payload:
   - DOMAIN-SUFFIX,vercel.com
   - DOMAIN-SUFFIX,netlify.app
   - DOMAIN-SUFFIX,openrouter.ai
+  - DOMAIN-SUFFIX,stripe.com
