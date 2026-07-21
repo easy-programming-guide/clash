@@ -10,3 +10,4 @@ payload:
   - 'production-openaicom-storage.azureedge.net'
   - '+.anthropic.com'
   - '+.nvidia.com'
+  - '+.microsoft.com'
